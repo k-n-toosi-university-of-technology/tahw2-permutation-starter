@@ -22,7 +22,8 @@ bc, cb
 </div>
 
 # Sample
-```
+
+```java
 public class Permutation {
     public static String[] permutation;
     //public static int index = 0; if you need a counter
@@ -35,3 +36,30 @@ public class Permutation {
 }
 
 ```
+
+<div dir="rtl" align="right">
+ # ورودی
+ورودی از طریق کامند لاین و دو عدد بین 0 تا 52 می باشند. 
+    
+# خروجی
+خروجی برنامه آرایه جایگشت های مورد نظر است. حتما جواب ها را وارد آرایه کنید. در صورتی که جوابی وجود ندارد و طول بازه داده شده 0 است آرایه را خالی بگذارید نه null.
+    
+    
+```java
+permutation = new String[0]; // not permutation = null 
+```
+
+
+# مثال
+## ورودی نمونه ۱
+```
+0 2
+```
+اعداد 0 تا 26 نمایانگر حروف کوچک و بعد از آن نمایانگر حروف بزرگ می باشند.
+
+## خروجی نمونه ۱
+```
+[ab, ba]
+```
+ترتیب نداریم.
+</div>
