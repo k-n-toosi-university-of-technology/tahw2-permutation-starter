@@ -13,6 +13,7 @@ import com.puppycrawl.tools.checkstyle.PropertiesExpander;
 import com.puppycrawl.tools.checkstyle.api.AuditListener;
 import com.puppycrawl.tools.checkstyle.api.CheckstyleException;
 import com.puppycrawl.tools.checkstyle.api.Configuration;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,18 +23,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.junit.Test;
+
 import static org.junit.Assert.*;
+
 import org.xml.sax.InputSource;
 
 /**
- *
  * @author mhrimaz
  */
 public class CheckStyleTest {
-    
-    
-    
+
     @Test
     public void testCheckStyleIndentation() {
 
@@ -63,7 +64,7 @@ public class CheckStyleTest {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(CheckStyleTest.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         Configuration configuration = null;
         try {
             configuration = ConfigurationLoader.loadConfiguration(inputSource,
@@ -97,7 +98,7 @@ public class CheckStyleTest {
         System.out.println("Found " + errors + " check style errors.");
         System.out.println(sos.toString());
         assertTrue(errors + " check style errors found. " + sos.toString(), errors == 0);
-
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Indentation.\" } | $$$GRADER$$$");
         /*
          * Clean up
          */
@@ -105,7 +106,7 @@ public class CheckStyleTest {
 
     }
 
-        @Test
+    @Test
     public void testCheckStyleNaming() {
 
         /*
@@ -134,7 +135,7 @@ public class CheckStyleTest {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(CheckStyleTest.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         Configuration configuration = null;
         try {
             configuration = ConfigurationLoader.loadConfiguration(inputSource,
@@ -168,7 +169,7 @@ public class CheckStyleTest {
         System.out.println("Found " + errors + " check style errors.");
         System.out.println(sos.toString());
         assertTrue(errors + " check style errors found. " + sos.toString(), errors == 0);
-
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Indentation.\" } | $$$GRADER$$$");
         /*
          * Clean up
          */

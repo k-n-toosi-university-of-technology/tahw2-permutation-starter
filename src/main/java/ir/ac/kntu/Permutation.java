@@ -1,3 +1,5 @@
+package ir.ac.kntu;
+
 public class Permutation {
     public static String[] permutation;
     

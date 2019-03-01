@@ -7,19 +7,25 @@ package ir.ac.kntu.style;
 
 
 import ir.ac.kntu.Permutation;
+
 import java.util.Arrays;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+
 import org.junit.Test;
+
 import static org.junit.Assert.*;
+
 import org.junit.Before;
 
 /**
- *
  * @author Hamed Khashehchi
  */
 public class SolutionTest {
-    
+    static {
+        System.err.println("$$$GRADER$$$ | { type:\"MSG\" , key:\"TOTAL\" , value:40, priority:1  }  | $$$GRADER$$$");
+    }
+
     @Before
     public void setup() {
         Class<Permutation> permutationClass = Permutation.class;
@@ -41,53 +47,56 @@ public class SolutionTest {
             }
         }
     }
-    
-@Test
+
+    @Test
     public void testNormal() {
-        String[] args=new String[2];
-        args[0]="0";
-        args[1]="2";
+        String[] args = new String[2];
+        args[0] = "0";
+        args[1] = "2";
         Permutation.main(args);
         String[] list = Permutation.permutation;
         Arrays.sort(list);
         String[] answer = new String[2];
-        answer[0]="ba";
-        answer[1]="ab";
+        answer[0] = "ba";
+        answer[1] = "ab";
         Arrays.sort(answer);
         assertArrayEquals(answer, list);
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:7 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
     }
-    
-     @Test
+
+    @Test
     public void testNormal1() {
-        String[] args=new String[2];
-        args[0]="25";
-        args[1]="28";
+        String[] args = new String[2];
+        args[0] = "25";
+        args[1] = "28";
         Permutation.main(args);
         String[] list = Permutation.permutation;
         Arrays.sort(list);
         String[] answer = new String[6];
-        answer[0]="zAB";
-        answer[1]="zBA";
-        answer[2]="AzB";
-        answer[3]="ABz";
-        answer[4]="BzA";
-        answer[5]="BAz";
+        answer[0] = "zAB";
+        answer[1] = "zBA";
+        answer[2] = "AzB";
+        answer[3] = "ABz";
+        answer[4] = "BzA";
+        answer[5] = "BAz";
         Arrays.sort(answer);
         assertArrayEquals(answer, list);
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:7 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
     }
- 
-    
+
+
     @Test
     public void testEmpty() {
-        String[] args=new String[2];
-        args[0]="1";
-        args[1]="1";
+        String[] args = new String[2];
+        args[0] = "1";
+        args[1] = "1";
         Permutation.main(args);
         String[] list = Permutation.permutation;
         Arrays.sort(list);
-	    String[] answer = new String[0];
+        String[] answer = new String[0];
         Arrays.sort(answer);
         assertArrayEquals(answer, list);
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:7 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
     }
 
 }
