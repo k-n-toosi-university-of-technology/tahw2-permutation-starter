@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 
 /**
+ * 30 points
  * @author Hamed Khashehchi
  */
 public class SolutionTest {
@@ -116,7 +117,7 @@ public class SolutionTest {
         String[] answer = new String[0];
         Arrays.sort(answer);
         assertArrayEquals(answer, list);
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:5 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:6 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
     }
 
 }
