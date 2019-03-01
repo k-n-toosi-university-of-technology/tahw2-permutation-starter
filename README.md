@@ -2,7 +2,7 @@
 
 [![Grader Status](YOUR_GRADER_BADGE)](YOUR_GRADER_BADGE)
 
-YOUR_GRADER_BADGE looks like this: https://kntu-grader.herokuapp.com/minimal?repo=<REPO_NAME>&id=<A_STUDENT_ID>-<B_STUDENT_ID>
+YOUR_GRADER_BADGE looks like this: https://kntu-grader.herokuapp.com/minimal?repo=<REPO_NAME>&id=<STUDENT_ID>
 
 
 # Assignment discription
