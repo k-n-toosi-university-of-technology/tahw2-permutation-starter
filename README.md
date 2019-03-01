@@ -1,8 +1,8 @@
-# TA HW2 - Permutation (Recursion) - ? Points
+# TA HW2 - Permutation (Recursion) - 30 Points
 
 [![Grader Status](YOUR_GRADER_BADGE)](YOUR_GRADER_BADGE)
 
-YOUR_GRADER_BADGE looks like this: https://kntu-grader.herokuapp.com/minimal?repo=<REPO_NAME>&id=<A_STUDENT_ID>-<B_STUDENT_ID>
+YOUR_GRADER_BADGE looks like this: https://kntu-grader.herokuapp.com/minimal?repo=<REPO_NAME>&id=<STUDENT_ID>
 
 
 # Assignment discription
@@ -37,10 +37,10 @@ public class Permutation {
 
 <div dir="rtl" align="right">
     
-# Input
+# ورودی
 ورودی از طریق کامند لاین و دو عدد بین 0 تا 52 می باشند. 
     
-# Output
+# خروجی
 خروجی برنامه آرایه جایگشت های مورد نظر است. حتما جواب ها را وارد آرایه کنید. در صورتی که جوابی وجود ندارد و طول بازه داده شده 0 است آرایه را خالی بگذارید نه null.
 
 </div>
