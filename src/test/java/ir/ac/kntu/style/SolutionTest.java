@@ -23,7 +23,7 @@ import org.junit.Before;
  */
 public class SolutionTest {
     static {
-        System.err.println("$$$GRADER$$$ | { type:\"MSG\" , key:\"TOTAL\" , value:30, priority:1  }  | $$$GRADER$$$");
+        System.err.println("$$$GRADER$$$ | { type:\"MSG\" , key:\"TOTAL\" , value:40, priority:1  }  | $$$GRADER$$$");
     }
 
     @Before
