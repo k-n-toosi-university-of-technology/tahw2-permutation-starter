@@ -14,7 +14,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- *
+ * 5 points
  * @author hossein
  */
 public class CheckPMDTest {
@@ -35,15 +35,17 @@ public class CheckPMDTest {
         PMDConfiguration pmdConfiguration = new PMDConfiguration();
         pmdConfiguration.setRuleSets("category/java/bestpractices.xml/DefaultLabelNotLastInSwitchStmt,"
                 + "category/java/design.xml/ExcessiveMethodLength,"
-                + "category/java/errorprone.xml/UseEqualsToCompareStrings");
-        
-        
+                + "category/java/errorprone.xml/UseEqualsToCompareStrings,"
+                + "category/java/errorprone.xml/CloseResource");
+
+
         String collect = files.stream()
                 .map(f -> f.getPath())
                 .collect(Collectors.joining(","));
         pmdConfiguration.setInputPaths(collect);
         pmdConfiguration.setReportFormat("text");
         int violations = PMD.doPMD(pmdConfiguration);
+        System.out.println("violations = " + violations);
         Assert.assertTrue("No Vilation in Resource Closing", violations == 0);
         System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:5 , reason:\"PMD.\" } | $$$GRADER$$$" );
     }
