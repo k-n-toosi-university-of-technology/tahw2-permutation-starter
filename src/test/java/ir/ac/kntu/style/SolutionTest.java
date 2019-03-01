@@ -23,7 +23,7 @@ import org.junit.Before;
  */
 public class SolutionTest {
     static {
-        System.err.println("$$$GRADER$$$ | { type:\"MSG\" , key:\"TOTAL\" , value:30, priority:1  }  | $$$GRADER$$$");
+        System.err.println("$$$GRADER$$$ | { type:\"MSG\" , key:\"TOTAL\" , value:40, priority:1  }  | $$$GRADER$$$");
     }
 
     @Before
@@ -61,7 +61,7 @@ public class SolutionTest {
         answer[1] = "ab";
         Arrays.sort(answer);
         assertArrayEquals(answer, list);
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:7 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:8 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
     }
 
     @Test
@@ -81,7 +81,27 @@ public class SolutionTest {
         answer[5] = "BAz";
         Arrays.sort(answer);
         assertArrayEquals(answer, list);
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:7 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:8 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
+    }
+
+    @Test
+    public void testNormal2() {
+        String[] args = new String[2];
+        args[0] = "32";
+        args[1] = "35";
+        Permutation.main(args);
+        String[] list = Permutation.permutation;
+        Arrays.sort(list);
+        String[] answer = new String[6];
+        answer[0] = "GHI";
+        answer[1] = "GIH";
+        answer[2] = "HGI";
+        answer[3] = "HIG";
+        answer[4] = "IHG";
+        answer[5] = "IGH";
+        Arrays.sort(answer);
+        assertArrayEquals(answer, list);
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:8 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
     }
 
 
@@ -96,7 +116,7 @@ public class SolutionTest {
         String[] answer = new String[0];
         Arrays.sort(answer);
         assertArrayEquals(answer, list);
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:7 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:5 , reason:\"Your Output is correct.\" } | $$$GRADER$$$" );
     }
 
 }
