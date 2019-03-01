@@ -102,13 +102,12 @@ public class CheckStyleTest {
         System.out.println("Found " + errors + " check style errors.");
         System.out.println(sos.toString());
         assertTrue(errors + " check style errors found. " + sos.toString(), errors == 0);
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:3 , reason:\"Indentation.\" } | $$$GRADER$$$");
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2, reason:\"Indentation.\" } | $$$GRADER$$$");
 
         /*
          * Clean up
          */
         checker.destroy();
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Indentation.\" } | $$$GRADER$$$");
     }
 
     @Test
@@ -180,7 +179,6 @@ public class CheckStyleTest {
          * Clean up
          */
         checker.destroy();
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Naming.\" } | $$$GRADER$$$" );
     }
 
     private static void listFiles(List<File> files, File folder, String extension) {
