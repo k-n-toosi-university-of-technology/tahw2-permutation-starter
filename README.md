@@ -1,4 +1,4 @@
-# TA HW2 - Permutation (Recursion) - ? Points
+# TA HW2 - Permutation (Recursion) - 30 Points
 
 [![Grader Status](YOUR_GRADER_BADGE)](YOUR_GRADER_BADGE)
 
