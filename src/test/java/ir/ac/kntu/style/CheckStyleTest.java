@@ -32,7 +32,7 @@ import static org.junit.Assert.*;
 import org.xml.sax.InputSource;
 
 /**
- * 4 points
+ * 5 points
  *
  * @author mhrimaz
  */
