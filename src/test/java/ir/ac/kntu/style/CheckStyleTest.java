@@ -11,6 +11,7 @@ import com.puppycrawl.tools.checkstyle.ConfigurationLoader;
 import com.puppycrawl.tools.checkstyle.DefaultLogger;
 import com.puppycrawl.tools.checkstyle.PropertiesExpander;
 import com.puppycrawl.tools.checkstyle.api.AuditListener;
+import com.puppycrawl.tools.checkstyle.api.AutomaticBean;
 import com.puppycrawl.tools.checkstyle.api.CheckstyleException;
 import com.puppycrawl.tools.checkstyle.api.Configuration;
 
@@ -31,9 +32,12 @@ import static org.junit.Assert.*;
 import org.xml.sax.InputSource;
 
 /**
+ * 4 points
+ *
  * @author mhrimaz
  */
 public class CheckStyleTest {
+
 
     @Test
     public void testCheckStyleIndentation() {
@@ -52,7 +56,7 @@ public class CheckStyleTest {
          * Listener
          */
         ByteArrayOutputStream sos = new ByteArrayOutputStream();
-        AuditListener listener = new DefaultLogger(sos, false);
+        AuditListener listener = new DefaultLogger(sos, AutomaticBean.OutputStreamOptions.NONE);
 
         /*
          * Configuration
@@ -69,7 +73,7 @@ public class CheckStyleTest {
         try {
             configuration = ConfigurationLoader.loadConfiguration(inputSource,
                     new PropertiesExpander(System.getProperties()),
-                    false);
+                    ConfigurationLoader.IgnoredModulesOptions.OMIT);
         } catch (CheckstyleException ex) {
             Logger.getLogger(CheckStyleTest.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -98,12 +102,12 @@ public class CheckStyleTest {
         System.out.println("Found " + errors + " check style errors.");
         System.out.println(sos.toString());
         assertTrue(errors + " check style errors found. " + sos.toString(), errors == 0);
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Indentation.\" } | $$$GRADER$$$");
+
         /*
          * Clean up
          */
         checker.destroy();
-
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Indentation.\" } | $$$GRADER$$$");
     }
 
     @Test
@@ -123,7 +127,7 @@ public class CheckStyleTest {
          * Listener
          */
         ByteArrayOutputStream sos = new ByteArrayOutputStream();
-        AuditListener listener = new DefaultLogger(sos, false);
+        AuditListener listener = new DefaultLogger(sos, AutomaticBean.OutputStreamOptions.NONE);
 
         /*
          * Configuration
@@ -140,7 +144,7 @@ public class CheckStyleTest {
         try {
             configuration = ConfigurationLoader.loadConfiguration(inputSource,
                     new PropertiesExpander(System.getProperties()),
-                    false);
+                    ConfigurationLoader.IgnoredModulesOptions.OMIT);
         } catch (CheckstyleException ex) {
             Logger.getLogger(CheckStyleTest.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -169,15 +173,15 @@ public class CheckStyleTest {
         System.out.println("Found " + errors + " check style errors.");
         System.out.println(sos.toString());
         assertTrue(errors + " check style errors found. " + sos.toString(), errors == 0);
-        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Indentation.\" } | $$$GRADER$$$");
+
         /*
          * Clean up
          */
         checker.destroy();
-
+        System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:2 , reason:\"Naming.\" } | $$$GRADER$$$" );
     }
 
-    private static void listFiles(List files, File folder, String extension) {
+    private static void listFiles(List<File> files, File folder, String extension) {
         if (folder.canRead()) {
             if (folder.isDirectory()) {
                 for (File f : folder.listFiles()) {
