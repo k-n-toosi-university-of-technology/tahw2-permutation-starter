@@ -102,11 +102,8 @@ public class CheckStyleTest {
         System.out.println("Found " + errors + " check style errors.");
         System.out.println(sos.toString());
         assertTrue(errors + " check style errors found. " + sos.toString(), errors == 0);
-<<<<<<< HEAD
         System.err.println("$$$GRADER$$$ | { type:\"SCORE\" , amount:3 , reason:\"Indentation.\" } | $$$GRADER$$$");
-=======
 
->>>>>>> ad5e90fd7fc8607a449334a7a880039d40c03248
         /*
          * Clean up
          */
